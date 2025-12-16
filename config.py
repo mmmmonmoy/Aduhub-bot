@@ -11,10 +11,7 @@ MONETAG_LINKS = [
 ]
 
 # RichAds (না চাইলে "" রাখো)
-RICHADS_LINK = [
-            "https://10183.xml.4armn.com/direct-link?pubid=996271&siteid=[SITE_ID]"
-            "https://10183.xml.4armn.com/direct-link?pubid=996271&siteid=[SITE_ID]"
-            ]
+RICHADS_LINK = "https://10183.xml.4armn.com/direct-link?pubid=996271&siteid=[SITE_ID]"
 
 # Group links
 GROUP1 = "https://t.me/+jZ2MWDmS0pRkMGU1"
@@ -24,4 +21,5 @@ GROUP2 = "https://t.me/+9l8b97UuCvU5M2Fl"
 LIVE_BUTTON_LINK = "https://adulthub3m.blogspot.com/p/adult-hub.html"
 
 # 24 hours
+
 AD_INTERVAL = 86400
