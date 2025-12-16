@@ -1,6 +1,10 @@
 import random
 import time
-from aiogram import Bot, Dispatcher, executor, types
+from aiogram import Bot, Dispatcher, types
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.filters import Command
+from aiogram import F
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from config import *
 from data import users, source_stats
@@ -84,4 +88,5 @@ async def stats(message: types.Message):
 
 
 if _name_ == "_main_":
+
     executor.start_polling(dp)
