@@ -7,9 +7,9 @@ ADMIN_ID = 6505852014  # তোমার Telegram ID
 MONETAG_LINKS = [
     "https://otieu.com/4/10331845",
     "https://otieu.com/4/10331844",
-    "https://www.effectivegatecpm.com/mqt8c7pndp?key=09594e56b742d8c8244f954efdd1a138"
+    "https://otieu.com/4/10332259"
 ]
-
+# "https://www.effectivegatecpm.com/mqt8c7pndp?key=09594e56b742d8c8244f954efdd1a138"
 # RichAds (না চাইলে "" রাখো)
 RICHADS_LINK = "https://10183.xml.4armn.com/direct-link?pubid=996271&siteid=[SITE_ID]"
 
@@ -23,3 +23,4 @@ LIVE_BUTTON_LINK = "https://adulthub3m.blogspot.com/p/adult-hub.html"
 # 24 hours
 
 AD_INTERVAL = 86400
+
