@@ -1,21 +1,10 @@
 services:
   - type: web
-    name: traffic-bot
+    name: Aduhub-bot
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
     runtime: python
     pythonVersion: 3.10.13
-    envVars:
-      TELEGRAM_TOKEN: 8448364028:AAFYDdikPXafvwJUMQ8KsByqYdFmm-XwRdU
-      DATABASE_URL: # Render অটো যোগ করবে
-
-  - type: web
-    name: admin-panel
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn admin_panel.app:app --bind 0.0.0.0:$PORT
-    envVars:
-      DATABASE_URL: # Render অটো যোগ করবে
+    
