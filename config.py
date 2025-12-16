@@ -11,7 +11,11 @@ MONETAG_LINKS = [
 ]
 # "https://www.effectivegatecpm.com/mqt8c7pndp?key=09594e56b742d8c8244f954efdd1a138"
 # RichAds (না চাইলে "" রাখো)
-RICHADS_LINK = "https://10183.xml.4armn.com/direct-link?pubid=996271&siteid=[SITE_ID]"
+RICHADS_LINK = [
+    "https://10183.xml.4armn.com/direct-link?pubid=996271&siteid=[SITE_ID]",
+    "https://www.effectivegatecpm.com/mqt8c7pndp?key=09594e56b742d8c8244f954efdd1a138"
+]
+            
 
 # Group links
 GROUP1 = "https://t.me/+jZ2MWDmS0pRkMGU1"
@@ -23,4 +27,5 @@ LIVE_BUTTON_LINK = "https://adulthub3m.blogspot.com/p/adult-hub.html"
 # 24 hours
 
 AD_INTERVAL = 86400
+
 
