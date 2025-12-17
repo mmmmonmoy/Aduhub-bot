@@ -1,2 +1,1 @@
-aiohttp>=3.10.0  # or the latest version shown on https://pypi.org/project/aiohttp/
-pip freeze > requirements.txt
+aiohttp >= 3.10.0  # or the latest version shown on https://pypi.org/project/aiohttp/
