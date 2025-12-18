@@ -87,9 +87,10 @@ async def stats(message: types.Message):
     await message.answer(text)
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
 
     executor.start_polling(dp)
+
 
 
 
