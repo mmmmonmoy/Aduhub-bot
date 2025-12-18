@@ -75,7 +75,7 @@ async def start(message: types.Message):
     )
 
 
-@dp.message_handler(commands=["stats"])
+@dp.message(Command("start"))
 async def stats(message: types.Message):
     if message.from_user.id != ADMIN_ID:
         return
@@ -90,5 +90,6 @@ async def stats(message: types.Message):
 if _name_ == "_main_":
 
     executor.start_polling(dp)
+
 
 
