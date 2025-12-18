@@ -10,7 +10,7 @@ from config import *
 from data import users, source_stats
 
 bot = Bot(token=BOT_TOKEN)
-dp = Dispatcher(bot)
+dp = Dispatcher()
 
 # Adult images (soft)
 IMAGES = [
@@ -90,3 +90,4 @@ async def stats(message: types.Message):
 if _name_ == "_main_":
 
     executor.start_polling(dp)
+
