@@ -26,7 +26,7 @@ CAPTIONS = [
 ]
 
 
-@dp.message_handler(commands=["start"])
+@dp.message(Command("start"))
 async def start(message: types.Message):
     user_id = message.from_user.id
     source = message.get_args() or "direct"
@@ -90,4 +90,5 @@ async def stats(message: types.Message):
 if _name_ == "_main_":
 
     executor.start_polling(dp)
+
 
