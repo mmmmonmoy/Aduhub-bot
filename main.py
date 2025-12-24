@@ -1,11 +1,10 @@
 import asyncio
 import random
 import time
+
 from aiogram import Bot, Dispatcher, types
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.filters import Command
-from aiogram import F
-from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import *
 from data import users, source_stats
@@ -17,7 +16,7 @@ dp = Dispatcher()
 IMAGES = [
     "https://i.imgur.com/9ZQZ6xF.jpg",
     "https://i.imgur.com/L7QZK5U.jpg",
-    "https://i.imgur.com/8QxQZpR.jpg"
+    "https://i.imgur.com/L7QZK5U.jpg"
 ]
 
 CAPTIONS = [
@@ -49,19 +48,14 @@ async def start(message: types.Message):
         if RICHADS_LINK:
             await message.answer(RICHADS_LINK)
 
-    # Buttons
-    keyboard = types.InlineKeyboardMarkup(row_width=1)
-
-    keyboard.add(
-        types.InlineKeyboardButton(
-            "🎬 LIVE দেখুন",
-            url=LIVE_BUTTON_LINK
-        )
-    )
-
-    keyboard.add(
-        types.InlineKeyboardButton("🔞 গ্রুপ ১", url=GROUP1),
-        types.InlineKeyboardButton("🔞 গ্রুপ ২", url=GROUP2)
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="🎬 LIVE দেখুন", url=LIVE_BUTTON_LINK)],
+            [
+                InlineKeyboardButton(text="🔞 গ্রুপ ১", url=GROUP1),
+                InlineKeyboardButton(text="🔞 গ্রুপ ২", url=GROUP2)
+            ]
+        ]
     )
 
     caption_text = (
@@ -76,7 +70,7 @@ async def start(message: types.Message):
     )
 
 
-@dp.message(Command("start"))
+@dp.message(Command("stats"))
 async def stats(message: types.Message):
     if message.from_user.id != ADMIN_ID:
         return
@@ -88,12 +82,10 @@ async def stats(message: types.Message):
     await message.answer(text)
 
 
+async def main():
+    print("🤖 Bot started...")
+    await dp.start_polling(bot)
+
+
 if __name__ == "__main__":
-
     asyncio.run(main())
-
-
-
-
-
-
