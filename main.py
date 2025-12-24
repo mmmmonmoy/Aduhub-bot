@@ -1,3 +1,4 @@
+import asyncio
 import random
 import time
 from aiogram import Bot, Dispatcher, types
@@ -90,6 +91,7 @@ async def stats(message: types.Message):
 if __name__ == "__main__":
 
     asyncio.run(main())
+
 
 
 
